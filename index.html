@@ -1,59 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Manipulating the DOM</title>
-  <!-- Load Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
-  <link href="css/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manipulating the DOM</title>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <!-- Load Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
+    <!-- Load Styles -->
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-  <!-- HTML Follows BEM naming conventions 
-  IDs are only used for sections to connect menu achors to sections -->
-  <header class="page__header">
+<!-- HTML Follows BEM naming conventions
+IDs are only used for sections to connect menu achors to sections -->
+<header class="page__header">
     <nav class="navbar__menu">
-      <!-- Navigation starts as empty UL that will be populated with JS -->
-      <ul id="navbar__list"></ul>
+        <!-- Navigation starts as empty UL that will be populated with JS -->
+        <ul id="navbar__list" class="nav-bar">
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#javascript">JavaScript</a></li>
+            <li><a href="#php">PHP</a></li>
+            <li><a href="#jquery">JQuery</a></li>
+        </ul>
     </nav>
-  </header>
-  <main>
+</header>
+<main>
     <header class="main__hero">
-      <h1>Landing Page </h1>
+        <h1>Front-end Tech Intro</h1>
     </header>
-    <!-- Each Section has an ID (used for the anchor) and 
+    <!-- Each Section has an ID (used for the anchor) and
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-    <section id="section1" data-nav="Section 1" class="your-active-class">
-      <div class="landing__container">
-        <h2>Section 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
+    <section id="css" data-nav="CSS" class="active-section">
+        <div class="landing__container">
+            <h2>CSS</h2>
+            <p>
+                CSS stands for Cascading Style Sheets CSS describes how HTML elements are to be displayed on screen,
+                paper, or in other media CSS saves a lot of work. It can control the layout of multiple web pages all at
+                once External stylesheets are stored in CSS files
+            </p>
+            <p>
+                CSS is used to define styles for your web pages, including the design, layout and variations in display
+                for different devices and screen sizes.
+            </p>
+        </div>
     </section>
-    <section id="section2" data-nav="Section 2">
-      <div class="landing__container">
-        <h2>Section 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+    <section id="html" data-nav="HTML">
+        <div class="landing__container">
+            <h2>HTML</h2>
+            <p>HTML is the standard markup language for Web pages.
+                With HTML you can create your own Website. This tutorial follows the latest HTML5 standard. HTML is easy to learn - You will enjoy it!.
+            </p>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
+            <p>
+                avaScript Can Change HTML Content One of many JavaScript HTML methods is getElementById(). This example uses the method to "find" an HTML element (with id="demo") and changes the element content (innerHTML) to "Hello JavaScript":
+            </p>
+        </div>
     </section>
-    <section id="section3" data-nav="Section 3">
-      <div class="landing__container">
-        <h2>Section 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+    <section id="javascript" data-nav="JavaScript">
+        <div class="landing__container">
+            <h2>JavaScript</h2>
+            <p>JavaScript is the programming language of HTML and the Web. JavaScript is easy to learn. This tutorial will teach you JavaScript from basic to advanced.</p>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
+            <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
+                luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
+                porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+        </div>
     </section>
-  </main>
-  <footer class="page__footer">
-    <p>&copy Udacity.</p>
-  </footer>
 
+    <section id="php" data-nav="PHP">
+        <div class="landing__container">
+            <h2>PHP</h2>
+            <p>PHP is a server scripting language, and a powerful tool for making dynamic and interactive Web pages.
+                PHP is a widely-used, free, and efficient alternative to competitors such as Microsoft's ASP. PHP 7 is the latest stable release.
+            </p>
+
+            <p>
+                PHP is an acronym for "PHP: Hypertext Preprocessor" PHP is a widely-used, open source scripting language PHP scripts are executed on the server PHP is free to download and use
+            </p>
+        </div>
+    </section>
+
+    <section id="jquery" data-nav="JQuery">
+        <div class="landing__container">
+            <h2>JQuery</h2>
+            <p>jQuery is a lightweight, "write less, do more", JavaScript library. The purpose of jQuery is to make it much easier to use JavaScript on your website. jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can
+                call with a single line of code. jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation. The jQuery libra</p>
+
+            <p>
+                There are lots of other JavaScript libraries out there, but jQuery is probably the most popular, a
+                nd also the most extendable. Many of the biggest companies on the Web use jQuery, such as: Google Microsoft IBM Netflix
+            </p>
+        </div>
+    </section>
+</main>
+<footer class="page__footer">
+    <p>&copy Udacity</p>
+</footer>
+
+<script src="js/app.js"></script>
 </body>
 </html>
