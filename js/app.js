@@ -27,6 +27,8 @@
 
 
 let sections = document.getElementsByTagName('section');
+let ulElement = document.getElementById('navbar__list');
+let isScrolling;
 
 buildNavigationBar();
 
@@ -40,8 +42,6 @@ buildNavigationBar();
 
 function buildNavigationBar(){
     [...sections].forEach((section) => {
-        let ulElement = document.getElementById('navbar__list');
-
         let liElement = document.createElement('li');
         liElement.setAttribute('id', section.id + '-li');
 
@@ -121,7 +121,13 @@ scrollBtn.addEventListener('click', () => {
 window.onscroll = function() {scrollFunction(); checkActiveSections();};
 
 function scrollFunction() {
-    if (document.documentElement.scrollTop > 2000) {
+    ulElement.style.display = 'block';
+    window.clearTimeout( isScrolling );
+    isScrolling = setTimeout(function() {
+        ulElement.style.display = 'none';
+    }, 2000);
+
+    if (document.documentElement.scrollTop > 1500) {
         scrollBtn.style.display = "block";
     } else {
         scrollBtn.style.display = "none";
