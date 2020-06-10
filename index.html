@@ -17,24 +17,20 @@ IDs are only used for sections to connect menu achors to sections -->
 <header class="page__header">
     <nav class="navbar__menu">
         <!-- Navigation starts as empty UL that will be populated with JS -->
-        <ul id="navbar__list" class="nav-bar">
-            <li><a href="#css">CSS</a></li>
-            <li><a href="#html">HTML</a></li>
-            <li><a href="#javascript">JavaScript</a></li>
-            <li><a href="#php">PHP</a></li>
-            <li><a href="#jquery">JQuery</a></li>
-        </ul>
+        <ul id="navbar__list" class="nav-bar"></ul>
     </nav>
 </header>
 <main>
     <header class="main__hero">
-        <h1>Front-end Tech Intro</h1>
+        <h1>
+            Front-end Tech Intro
+        </h1>
     </header>
     <!-- Each Section has an ID (used for the anchor) and
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-    <section id="css" data-nav="CSS" class="active-section">
+    <section id="css" data-nav="CSS">
         <div class="landing__container">
             <h2>CSS</h2>
             <p>
@@ -96,6 +92,12 @@ IDs are only used for sections to connect menu achors to sections -->
             </p>
         </div>
     </section>
+
+    <div id="scrollTop">
+        <a href="javascript:void(0)">
+            <img src="assets/images/scroll-top.png" alt="scroll btn">
+        </a>
+    </div>
 </main>
 <footer class="page__footer">
     <p>&copy Udacity</p>

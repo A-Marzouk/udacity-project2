@@ -203,6 +203,10 @@ section.active-section {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
+section.active-section h2 {
+    color: royalblue;
+}
+
 section.active-section .landing__container::before {
     opacity: 1;
     animation: rotate 4s linear 0s infinite forwards;
@@ -225,4 +229,16 @@ section.active-section .landing__container::after {
 		           translate(-1em) 
 		           rotate(-360deg);
 	}
+}
+
+#scrollTop{
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+#scrollTop a img{
+    width: 50px;
+    height: 50px;
 }
