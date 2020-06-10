@@ -121,12 +121,6 @@ scrollBtn.addEventListener('click', () => {
 window.onscroll = function() {scrollFunction(); checkActiveSections();};
 
 function scrollFunction() {
-    ulElement.style.display = 'block';
-    window.clearTimeout( isScrolling );
-    isScrolling = setTimeout(function() {
-        ulElement.style.display = 'none';
-    }, 2000);
-
     if (document.documentElement.scrollTop > 1500) {
         scrollBtn.style.display = "block";
     } else {
